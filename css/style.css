@@ -21,16 +21,12 @@ body {
     margin: 0;
 }
 
-.section,
-.container,
-header,
-footer,
-a.copyright:hover {
-    background-color: var(--sec-bg);
-}
-
 .section {
     margin: 30px;
+}
+
+h2 {
+  text-align: center;
 }
 
 header {
@@ -46,32 +42,12 @@ footer {
 }
 
 .logo {
-    float: left;
-    width: 2%;
-    height: 2%;
+    width: 128px;
+    height: 128px;
 }
 
 ul {
     padding: 0;
     margin: 0;
     list-style: none;
-}
-
-a.copyright  {
-    text-decoration: none;
-}
-a.copyright:hover {
-    color: var(--hover-color);
-    text-decoration: underline;
-}
-
-a  {
-    color: var(--fonts-color);
-    text-decoration: none;
-}
-a:hover {
-    color:var(--hover-color);
-    background-color: var(--hover-bg);
-    text-decoration: none;
-    border-radius: 3px;
 }
