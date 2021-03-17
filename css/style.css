@@ -1,11 +1,15 @@
-/*
-    Color Scheme:
+/* Color Scheme:
     #0B132B
     #1C2541
     #2C415B
     #5BC0BE
     #6FFFE9
 */
+
+
+
+/* Variables */
+
 :root{
     --page-background: #0B132B;
 
@@ -14,25 +18,99 @@
 
     --hover-color: #1C2541;
     --hover-bg: #6FFFE9;
+
+    --hover-dropdown-color: var(--fonts-color);
+    --hover-dropdown-bg: #2C415B;
+
+    --horizon-line: #5BC0BE;
 }
+
+
+
+/* -- Main + Theme -- */
+
 body {
     background-color: var(--page-background);
     color: var(--fonts-color);
     margin: 0;
 }
+.navbar, footer, .section{
+    background-color: var(--sec-bg);
+}
+
+
+
+/* -- Basic stuff -- */
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    text-shadow: var(--fonts-color);
+    text-shadow: 0 0 20px #5BC0BE;
+    line-height: 60px;
+}
+img {
+    position:-ms-page;
+}
+hr {
+    background-color: var(--horizon-line);
+}
+
+
+
+/* -- Page -- */
 
 .section {
     margin: 30px;
 }
-
-h2 {
-  text-align: center;
+.fill-all {
+    margin: 0;
+    position: relative;
 }
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.fit {
+    object-fit: cover;
+    object-position: top;
+}
+a {
+    text-decoration: none;
+    color: var(--fonts-color);
+}
+a:hover{
+    text-decoration: none;
+    color: var(--hover-color);
+    background-color: var(--hover-bg);
+    border-radius: 2px;
+}
+.cursor {
+	border-left: 4px solid white;
+}
+
+
+
+/* -- Header / Navbar -- */
 
 header {
     position: sticky;
     width: 100%;
 }
+.dropdown-menu {
+    background-color: var(--hover-bg);
+    color: var(--hover-color);
+}
+.dropdown-item:hover {
+    background-color: var(--sec-bg);
+    color: var(--fonts-color);
+    border-radius: 0;
+}
+
+
+
+/* -- Footer -- */
 
 footer {
     width: 100%;
@@ -40,14 +118,14 @@ footer {
     text-align: center;
     top: 100%;
 }
-
-.logo {
-    width: 128px;
-    height: 128px;
+.copyright,
+.terms {
+    text-decoration: none;
+    color: var(--fonts-color);
 }
-
-ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.copyright:hover,
+.terms:hover{
+    text-decoration: none;
+    color: #5BC0BE;
+    background-color: transparent;
 }
