@@ -26,7 +26,7 @@ DEALINGS IN THE SOFTWARE.
 var typeWriterElement = document.getElementById('typewriter');
 
 // The TextArray: 
-var textArray = ["Hey, I'm parpar8090.","I like programming.","I Love to play Minecraft.", "I am a 3D Artist."];
+var textArray = ["Welcome...", "I'm parpar8090.","I like programming","I love to play Minecraft.", "I am a Blender Artist."];
 
 // You can also do this by transfering it through a data-attribute
 // var textArray = typeWriterElement.getAttribute('data-array');
@@ -37,7 +37,7 @@ function delWriter(text, i, cb) {
 	if (i >= 0 ) {
 		typeWriterElement.innerHTML = text.substring(0, i--);
 		// generate a random Number to emulate backspace hitting.
- 		var rndBack = 10 + Math.random() * 100;
+ 		var rndBack = 5 + Math.random() * 100;
 		setTimeout(function() {
 			delWriter(text, i, cb);
 		},rndBack); 
